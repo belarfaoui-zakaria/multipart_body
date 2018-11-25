@@ -39,10 +39,12 @@ class Part < Struct.new(:name, :body, :filename, :content_disposition, :content_
   def encoded_body
     case encoding
     when nil
-      body
+      
     else
-      raise "Encodings have not been implemented"
+      puts "Encodings have not been implemented"
     end
+    
+    return body
   end
   
   def to_s
